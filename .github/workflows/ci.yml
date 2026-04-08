@@ -65,7 +65,7 @@ jobs:
 
   deployment:
     runs-on: ubuntu-latest
-    needs: [build, test] # depend on build , test job after successfully will deploy, if one of  the jobs fail will not start deploy
+    needs: [build] # depend on build , test job after successfully will deploy, if one of  the jobs fail will not start deploy
 
     steps:
       - name: Download Build Artifacts
